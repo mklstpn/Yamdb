@@ -8,7 +8,6 @@ services:
       - ./.env
   web:
     image: slake6/web:latest
-    #build: ../api_yamdb/
     restart: always
     volumes:
       - static_value:/app/static/    
