@@ -12,7 +12,7 @@
 
 #### Новые жанры может создавать только администратор
 
-#### Project is available at http://51.250.1.69 or http://roomtake.store
+#### Проект доступен на http://51.250.1.69 или http://roomtake.store
 
 ## Пример заполнения .env файла
 ```
