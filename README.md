@@ -1,20 +1,18 @@
-# Проект Yamdb в Docker
+# Yamdb in Docker
 
 ![yamdb_workflow](https://github.com/mklstpn/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
-## Описание приложения
+## App description:
 
-#### Проект YaMDb собирает отзывы пользователей на произведения
+#### Yamdb collect users reviews about films, songs, etc.
 
-#### Произведения делятся на категории(например, "Музыка", "Фильмы" и тд.)
+#### App have categories like 'Films', 'Music', 'Books', etc.
 
-#### Каждому произведению может быть присвоен жанр(например, "Роман", "Поп" и тд.)
+#### For each item can be added genre like 'Poem', 'Action', 'Pop' etc.
 
-#### Новые жанры может создавать только администратор
+#### New genres can be created only by admin
 
-#### Проект доступен на http://51.250.1.69 или http://roomtake.store
-
-## Пример заполнения .env файла
+## Example of .env file
 ```
 DB_ENGINE=django.db.backends.postgresql
 DB_NAME=<db name>
@@ -24,15 +22,12 @@ DB_HOST=<container name>
 DB_PORT=<db port>
 ```
 
-## Как запустить проект
-- Перейти в директорию /infra
-- Выполнить ```docker-compose up```
-- После успешного поднятия контейнеров последовательно выполнить:
+## How to run project:
+- Go into /infra dir
+- Run ```docker-compose up```
+- After containers start run these commands:
 ```
 docker-compose exec web python manage.py migrate
 docker-compose exec web python manage.py createsuperuser
 docker-compose exec web python manage.py collectstatic --no-input 
 ```
-
-## Автор
-#### Степанов Михаил
